@@ -3,6 +3,10 @@
     src: url(../resources/Norse-Bold.otf);
 }
 
+body {
+    font-family: 'Courier New', monospace;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -19,6 +23,8 @@
     width: 95%;
     height: 100%;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .brand figure {
@@ -41,9 +47,12 @@
 }
 
 form {
-    background-color: blue;
-    width: 90%;
+    background-color: white;
+    width: 95%;
     margin: 0 auto;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    overflow: scroll;
 }
 
 .credit {
@@ -51,6 +60,7 @@ form {
     text-align: center;
     width: 100%;
     margin: 1rem 0;
+    font-size: 0.8rem;
 }
 
 .credit a {
@@ -70,7 +80,7 @@ form {
     .banner {
         margin-top: 25vh;
         width: 100%;
-        flex-grow: 0;
+        height: auto;
     }
 
     form {
