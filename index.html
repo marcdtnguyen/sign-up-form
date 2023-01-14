@@ -28,33 +28,33 @@
                     <br>
                     <p>You know you want to.</p>
                 </div>
-                <form action="">
+                <form action="" novalidate>
                     <div class="form">
                         <h2>Let's do this!</h2>
                         <div class="inputs">
                             <div class="input">
                                 <label for="first-name">FIRST NAME</label>
-                                <input type="text" name="first-name" id="first-name" required>
+                                <input type="text" name="first-name" id="first-name" required minlength="3" maxlength="50"><span></span>
                             </div>
                             <div class="input">
                                 <label for="last-name">LAST NAME</label>
-                                <input type="text" name="last-name" id="last-name" required>
+                                <input type="text" name="last-name" id="last-name" required minlength="3" maxlength="50"><span></span>
                             </div>
                             <div class="input">
                                 <label for="email">EMAIL</label>
-                                <input type="email" name="email" id="email" required>
+                                <input type="email" name="email" id="email" required><span></span>
                             </div>
                             <div class="input">
                                 <label for="phone">PHONE NUMBER</label>
-                                <input type="tel" name="phone" id="phone">
+                                <input type="tel" name="phone" id="phone"><span></span>
                             </div>
                             <div class="input">
                                 <label for="password">PASSWORD</label>
-                                <input type="password" name="password" id="password" required class="error">
+                                <input type="password" name="password" id="password" required class="error"><span></span>
                             </div>
                             <div class="input">
                                 <label for="confirm">CONFIRM PASSWORD</label>
-                                <input type="password" name="confirm" id="confirm" required class="error">
+                                <input type="password" name="confirm" id="confirm" required class="error"><span></span>
                             </div>
                         </div>
                     </div>

@@ -7,8 +7,8 @@ function validate(e){
     } else {
         showError(e.target);
     }
-    // console.log(pwds[0].value , pwds[1].value)
-    // console.log(e.target)
+    console.log(pwds[0].value , pwds[1].value)
+    console.log(e)
 }
 
 function showMatch(e){

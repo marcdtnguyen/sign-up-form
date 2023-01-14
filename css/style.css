@@ -107,6 +107,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 15rem;
+    position: relative
 }
 
 label {
@@ -121,8 +122,20 @@ input {
     padding: 4px;
 }
 
-.error{
-    border: red 1px solid;
+input:required + span::before {
+    content: '*required';
+    position: absolute;
+    font-size: 0.5rem;
+    top: 0;
+    right: 2px;
+}
+
+input:optional + span::before {
+    content: 'optional';
+    position: absolute;
+    font-size: 0.5rem;
+    top: 0;
+    right: 2px;
 }
 
 input:focus {
@@ -130,9 +143,46 @@ input:focus {
     box-shadow: 0px 2px 5px rgb(86, 193, 254);
 }
 
+input:valid{
+    border: green 1px solid;
+}
+
+input:valid:focus {
+    box-shadow: none;
+}
+
+input:valid + span::after{
+    content: "✓";
+    color: green;
+    position: absolute;
+    top: 15px;
+    right: 7px;
+}
+
+input:invalid + span::after{
+    content: "*requirements not met";
+    color: orange;
+    position: absolute;
+    font-size: 0.6rem;
+    top: 42px;
+
+}
+
+.error:valid {
+    border: red 1px solid;
+}
+
+.error{
+    border: red 1px solid;
+}
+
 .error:focus {
     border: red 1px solid;
     box-shadow: none;
+}
+
+.error:valid + span::after {
+    content: '';
 }
 
 .submission {
